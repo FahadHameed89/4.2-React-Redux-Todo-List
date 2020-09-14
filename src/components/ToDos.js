@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addNewToDo } from '../actions/todos';
+import addNewToDo from '../actions/todos';
 
 
 function ToDos ( props ) 
