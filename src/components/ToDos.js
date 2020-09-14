@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { addNewToDo } from '../actions/todos';
 
 
 function ToDos ( props ) 
@@ -10,6 +11,7 @@ function ToDos ( props )
 
     const submitToDo = event => {
         event.preventDefault(); // Stop the page reloading!!!
+        props.dispatch(addNewToDo ( newTask ) );
     }
 
     return (
