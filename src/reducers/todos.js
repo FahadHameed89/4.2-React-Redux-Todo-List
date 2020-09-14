@@ -23,7 +23,14 @@ import { v4 as uuidv4} from 'uuid'
             newToDoList.push( newTask );
             // Return the updated state (overwrites the previous state)
             return newToDoList;
-            // By default, make no change
+        case 'REMOVE_TO_DO':
+            const updatedToDoList = state.filter( 
+                toDo => toDo.id !== action.payload
+             ); // .filter() method returns a new array after the filtration. It takes a FUNCTION as an argument, where we decide what is a match and what isnt a match.
+                // In this case, we are filtering and giving the SAME array, EXCEPT FOR the one which ID equals the action.payload, which will be FILETERED out. 
+                return updatedToDoList;
+                // RETURNS THE OVERTWRITE THE state with this new array of To-Dos. 
+             // By default, make no change
             default:
                 return state;
      }
