@@ -21,18 +21,18 @@ function ToDos ( props )
         <>
         <h2>To-Do Form</h2>
         <form onSubmit={submitToDo}>
-            <label htmlFor="task">Enter New Task:</label>
-            <input 
-            id="task" 
+          <label htmlFor="task">Enter New Task:</label>
+          <input
+            id="task"
             type="text"
-            value={newTask} 
-            onChange= { event => {setNewTask( event.target.value); } } />
-            <input value="Add New To-Do" type="submit" />
+            value={newTask}
+            onChange={ event => { setNewTask( event.target.value ); } } />
+          <input type="submit" value="Add New To-Do" />
         </form>
-
-        </>
+      </>
     );
-}
+  }
+  
 
 export default connect(
 // We set up a 'mapStateToProps' function / relationship. 
