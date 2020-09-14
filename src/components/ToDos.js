@@ -29,6 +29,6 @@ function ToDos ()
     );
 }
 
-export default ToDos;
+export default connect()(ToDos);
 
 // Line 16 - OnChange, We create a function for an event in which it sets newTask = event.target.value
