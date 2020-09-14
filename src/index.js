@@ -5,6 +5,7 @@ import { createStore } from 'redux';
 import toDosReducer from './reducers/todos';
 import addNewToDo from './actions/todos';
 import { Provider } from 'react-redux';
+import ToDos from './components/ToDos';
 
 /**
  * Redux Store
@@ -27,8 +28,7 @@ store.subscribe( () => console.log( store.getState() ) );
  // When using Redux, we use <Provider> command to come up with a 'store' prop to pass our global state info into.. Whenever we need it (whichever componenent needs it). 
 ReactDOM.render(
   <Provider store={store}>
-    <>
-    </>
+    <ToDos />
   </Provider>,
   document.getElementById('root')
 );
