@@ -4,10 +4,16 @@ function ToDos ()
 {
     const [newTask, setNewTask] = useState( '' );
 
+// Add a Submit Function 
+
+    const submitToDo = event => {
+        event.preventDefault(); // Stop the page reloading!!!
+    }
+
     return (
         <>
         <h2>To-Do Form</h2>
-        <form>
+        <form onSubmit={submitToDo}>
             <label htmlFor="task">Enter New Task:</label>
             <input 
             id="task" 
@@ -16,9 +22,7 @@ function ToDos ()
             onChange= { event => {setNewTask( event.target.value); } } />
             <input value="Add New To-Do" type="submit" />
         </form>
-        <ul>
-            
-        </ul>
+
         </>
     );
 }
