@@ -4,6 +4,7 @@ import './index.css';
 import { createStore } from 'redux';
 import toDosReducer from './reducers/todos';
 import addNewToDo from './actions/todos';
+import { Provider } from 'react-redux';
 
 /**
  * Redux Store
@@ -23,11 +24,12 @@ store.subscribe( () => console.log( store.getState() ) );
  store.dispatch( addNewToDo( "Research Redux") );
  store.dispatch( addNewToDo( "Review React") );
 
+ // When using Redux, we use <Provider> command to come up with a 'store' prop to pass our global state info into.. Whenever we need it (whichever componenent needs it). 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <>
     </>
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
