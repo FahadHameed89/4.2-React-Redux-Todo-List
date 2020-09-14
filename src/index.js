@@ -6,6 +6,7 @@ import toDosReducer from './reducers/todos';
 import addNewToDo from './actions/todos';
 import { Provider } from 'react-redux';
 import ToDos from './components/ToDos';
+import ToDoList from './components/ToDoList';
 
 /**
  * Redux Store
@@ -32,6 +33,8 @@ store.subscribe( () => console.log( store.getState() ) );
 ReactDOM.render(
   <Provider store={store}>
     <ToDos />
+    <ToDoList />
+
   </Provider>,
   document.getElementById('root')
 );

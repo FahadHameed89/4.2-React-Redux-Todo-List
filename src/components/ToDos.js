@@ -26,7 +26,7 @@ function ToDos ( props )
             onChange= { event => {setNewTask( event.target.value); } } />
             <input value="Add New To-Do" type="submit" />
         </form>
-        <ul></ul>
+
         </>
     );
 }
