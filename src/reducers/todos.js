@@ -1,3 +1,5 @@
+import { v4 as uuidv4} from 'uuid'
+
 /**
  * Redux Reducer(s)
  * 1. Just note we are using the same name for actions and reducers (todos.js) so we know which belongs with which and to reduce risk of confusion
@@ -12,6 +14,7 @@
         case 'ADD_NEW_TO_DO':
             // Prepare a new Task object
             const newTask = {
+                id: uuidv4,
                 task: action.payload
             }
             // Create a Copy of the original state array.

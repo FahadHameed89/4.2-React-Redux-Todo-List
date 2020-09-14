@@ -11,6 +11,9 @@ function ToDos ( props )
 
     const submitToDo = event => {
         event.preventDefault(); // Stop the page reloading!!!
+        // 1 - We get our task from local state
+        // 2 - We pass it to our action to format a request
+        // 3 - 
         props.dispatch(addNewToDo ( newTask ) );
     }
 

@@ -15,6 +15,14 @@
          payload: toDoContent
      };
  }
+
+ const removeToDo = id => {
+     return {
+         type: 'REMOVE_TO_DO',
+         payload: id
+     };
+ }
+
  // In this case we are pulling in toDoContent,
 
  // Don't forget to export this, if we want to use this in other files. 
