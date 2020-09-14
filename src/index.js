@@ -12,7 +12,10 @@ import ToDos from './components/ToDos';
  * Store is our global state. This iw where all of our global data exists. We pass in the reducer so it will know how to handle any actions (requests.)
  */
 
-const store = createStore( toDosReducer );
+const store = createStore( 
+  toDosReducer, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+   );
 
 // Default method included in store called 'subscribe', which is used to run instructions every time there is an update to the store.
 // In this case we are requesting it to console log the store's state every time there is a change.  
