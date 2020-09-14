@@ -21,6 +21,7 @@ store.subscribe( () => console.log( store.getState() ) );
  * Dispatch expects a properly formatted action, otherwise your reducer will not be able to read it. 
  */
  store.dispatch( addNewToDo( "Research Redux") );
+ store.dispatch( addNewToDo( "Review React") );
 
 ReactDOM.render(
   <React.StrictMode>
