@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { createStore } from 'redux';
 import toDosReducer from './reducers/todos';
+import addNewToDo from './actions/todos';
 
 /**
  * Redux Store
@@ -16,8 +17,10 @@ const store = createStore( toDosReducer );
 store.subscribe( () => console.log( store.getState() ) );
 
 /**
- * Redux Dispatch
+ * Redux Dispatch is used to send acctions to our stores' reducer
+ * Dispatch expects a properly formatted action, otherwise your reducer will not be able to read it. 
  */
+ store.dispatch( addNewToDo( "Research Redux") );
 
 ReactDOM.render(
   <React.StrictMode>
